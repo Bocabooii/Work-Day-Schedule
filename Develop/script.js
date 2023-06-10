@@ -39,12 +39,21 @@ $(function () {
     else {
       $(this).removeClass('past present').addClass('future')
     }
-  })
-};
+  })}
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+  const timeBlocks = Array.from(document.querySelectorAll('.time-block'));
+
+timeBlocks.forEach((block) => {
+  const key = block.id;
+  const value = localStorage.getItem(key);
+  const descriptionElement = block.querySelector('.description');
+  if (descriptionElement) {
+    descriptionElement.value = value;
+  }
+});
   // TODO: Add code to display the current date in the header of the page.
   function displayTime() {
     var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
