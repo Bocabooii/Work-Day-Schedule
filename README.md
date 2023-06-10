@@ -26,3 +26,5 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
+![Workday-scheduler_gif](https://github.com/Bocabooii/Work-Day-Schedule/assets/113655388/abd54461-619e-4512-980f-30bf432c783c)
+
